@@ -1,5 +1,5 @@
 import React from "react";
-import "./SearchInput.css";
+import "./SearchInput.scss";
 import { Search } from "../../assets/Icon.js";
 
 const SearchInput = () => {

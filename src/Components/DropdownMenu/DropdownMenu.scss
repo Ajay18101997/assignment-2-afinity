@@ -1,3 +1,6 @@
+@import "../../_variables.scss";
+@import "../../mixins";
+
 .dropdown {
   position: relative;
   cursor: pointer;
@@ -7,12 +10,12 @@
   top: 80px;
   right: 0;
   width: 356px;
-  background-color: #fff;
-  border: 1px solid #ccc;
+  background-color: $white;
+  border: 1px solid $gray;
   border-radius: 4px;
   z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   padding: 20px 20px 20px 16px;
+  padding: 10px;
 }
 
 .dropdown:nth-child(2) .dropdown-menu,
@@ -25,7 +28,7 @@
 }
 .dropdown:nth-child(2) .dropdown-button:hover svg path,
 .dropdown:nth-child(3) .dropdown-button:hover svg path {
-  fill: #fff;
+  fill: $white;
 }
 .dropdown:nth-child(3) .dropdown-button:hover {
   background: #fe5c73;
@@ -48,15 +51,13 @@
 }
 
 .dropdown-button {
-  background: #f5f7fa;
+  background: $background-color;
   border: none;
   cursor: pointer;
   padding: 0;
   width: 50px;
   height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-center;
   border-radius: 50%;
 }
 .dropdown:last-child .dropdown-button {
@@ -68,9 +69,19 @@
 .dropdown-item h2 {
   font-size: 20px;
   line-height: 24px;
-  color: #1a1919;
+  color: $light-black;
   font-weight: 700;
   margin: 0 0 24px 0;
+}
+
+.dropdown-item .dropdown-select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 11px;
+}
+
+.dropdown-item .dropdown-select option {
+  margin-top: 10px;
 }
 
 .notification-wrap {
@@ -82,18 +93,16 @@
   font-size: 14px;
   line-height: 18px;
   font-weight: 600;
-  color: #1a1919;
+  color: $light-black;
   margin: 0 0 10px 0;
 }
 .notification-wrap .bottom-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @include space-between; 
 }
 .notification-wrap .bottom-wrap p {
   font-size: 14px;
   line-height: 22px;
-  color: #1a1919;
+  color: $light-black;
 }
 
 .profile-wrap .top-wrapper {

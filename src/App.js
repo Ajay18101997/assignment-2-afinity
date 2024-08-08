@@ -3,8 +3,8 @@ import Sidebar from "./Components/Sidebar/Sidebar";
 import Loans from "./Components/Loans/Loans";
 import Header from "./Components/Header/Header";
 import "./App.scss";
-import "./Components/LoanTag/LoanTag.css";
-import "./Components/Loans/Loans.css";
+import "./Components/LoanTag/LoanTag.scss";
+import "./Components/Loans/Loans.scss";
 import { CONSTANT } from "./constant";
 
 function App() {

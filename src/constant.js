@@ -53,9 +53,9 @@ export const CONSTANT = {
       srNo: "05.",
       loanMoney: "$50,000",
       leftToPay: "$40,500",
-      duration: "25 months",
-      interestRate: "5%",
-      installment: "$2,000/month",
+      duration: "5 months",
+      interestRate: "16%",
+      installment: "$10,000/month",
     },
     {
       srNo: "06.",

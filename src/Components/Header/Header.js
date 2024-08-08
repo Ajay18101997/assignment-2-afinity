@@ -1,11 +1,12 @@
-import React from "react";
-import "./Header.css";
+import React, { useState } from "react";
+import "./Header.scss";
 import { Logo, Settingbtn, Notification } from "../../assets/Icon";
 import ProfileImage from "../../assets/Images/profile.png";
 import SearchInput from "../SearchInput/SearchInput";
 import DropdownMenu from "../DropdownMenu/DropdownMenu";
 
 const Header = ({ activeOption }) => {
+  const [selectedMenu, setSelectedMenu] = useState("Menu 1");
   const NotificationData = [
     <h2>Notifications</h2>,
     <div className="notification-wrap">
@@ -49,10 +50,17 @@ const Header = ({ activeOption }) => {
           <p>+91 9827839223 | gracejohn@gmail.com</p>
         </div>
       </div>
-      <p className="txt">Menu 1</p>
-      <p className="txt">Menu 1</p>
-      <p className="txt">Menu 1</p>
-      <p className="txt">Menu 1</p>
+      <div className="dropdown-item">
+        <select
+          className="dropdown-select"
+          value={selectedMenu}
+          onChange={(e) => setSelectedMenu(e.target.value)}
+        >
+          <option>Menu 1</option>
+          <option>Menu 2</option>
+          <option>Menu 3</option>
+        </select>
+      </div>
     </div>,
   ];
 
@@ -71,9 +79,7 @@ const Header = ({ activeOption }) => {
             <DropdownMenu
               buttonTitle={
                 <>
-                  <div
-                    dangerouslySetInnerHTML={{ __html: Settingbtn() }}
-                  ></div>
+                  <div dangerouslySetInnerHTML={{ __html: Settingbtn() }}></div>
                 </>
               }
             />

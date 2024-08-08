@@ -1,4 +1,12 @@
 /* Reset CSS */
+@import 'variables';
+@import 'mixins';
+
+$dropdown-border-radius: 4px;
+$dropdown-bg-color: $white;
+$dropdown-padding: 20px 20px 20px 16px;
+$dropdown-hover-color-1: #718ebf;
+$dropdown-hover-color-2: #fe5c73;
 
 html,
 body,

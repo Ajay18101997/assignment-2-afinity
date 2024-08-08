@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import "./DropdownMenu.css";
+import "./DropdownMenu.scss";
 import { Close } from "../../assets/Icon";
 
 const DropdownMenu = ({ buttonTitle, items, showCloseButton }) => {

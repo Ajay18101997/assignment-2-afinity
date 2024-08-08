@@ -39,9 +39,11 @@ const Loans = () => {
       <div className="loan-table">
         <div className="loan-table-row heading-row">
           {CONSTANT.TABLE_HEADER.map((value, index) => {
-            return(
-              <div className="cell" key={index}>{value}</div>
-            )
+            return (
+              <div className="cell" key={index}>
+                {value}
+              </div>
+            );
           })}
         </div>
         {CONSTANT.LOAN_DATA.map((loan, index) => (
